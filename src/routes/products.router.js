@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 })
 
 router.post("/", async (req, res) => {
-    const {title, description, price, code, stock, status, category, thumbnail} = req.body
+    const {title, description, price, code, stock, category, thumbnail} = req.body
 
     let product = {
         title,
@@ -25,7 +25,6 @@ router.post("/", async (req, res) => {
         code,
         stock,
         category,
-        status,
         thumbnail
     }
 

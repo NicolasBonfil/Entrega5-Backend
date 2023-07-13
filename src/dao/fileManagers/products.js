@@ -32,7 +32,9 @@ export default class ProductManager{
             product.id = products[products.length - 1].id + 1
         }
 
-        if(!product.title || !product.description || !product.price || !product.code || !product.stock || !product.status || !product.category){
+        product.status = true
+
+        if(!product.title || !product.description || !product.price || !product.code || !product.stock || !product.category){
             return({error: "Faltan datos"})
         }
 
