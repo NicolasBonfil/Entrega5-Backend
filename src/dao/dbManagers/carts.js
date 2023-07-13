@@ -25,7 +25,7 @@ export default class Carts{
             cart.id = carts[carts.length - 1].id + 1
         }
 
-        let result = cartsModel.create(cart)
+        let result = await cartsModel.create(cart)
 
         return ({status: "success", payload: result})
     }
