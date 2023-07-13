@@ -81,6 +81,7 @@ export default class Products{
 
     deleteProduct = async (pid) => {
         const product = await productsModel.findOne({id: pid})
+        
         if(!(product)){
             return ({status: "error", error: "No existe un producto con ese id"})
         }
