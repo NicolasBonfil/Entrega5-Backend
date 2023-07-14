@@ -15,7 +15,7 @@ const PORT = 8080
 
 mongoose.set("strictQuery", false)
 
-const connection = mongoose.connect("mongodb+srv://bonfilnico:12345@pruebacoder.q69nl8a.mongodb.net/?retryWrites=true&w=majority")
+const connection = mongoose.connect("mongodb+srv://bonfilnico:12345@pruebacoder.q69nl8a.mongodb.net/?retryWrites=true&w=majority", {dbName: "ecommerce"})
 
 app.engine("handlebars", handlebars.engine())
 app.set("views", __dirname + "/views")
